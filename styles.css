@@ -5,3 +5,10 @@ body{
     border: 10px solid #d8cfc4;
     box-sizing: border-box;
 }
+.navigation{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d8cfc4;
+  padding: 10px 20px;
+}
