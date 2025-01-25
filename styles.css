@@ -12,3 +12,14 @@ body{
   background-color: #d8cfc4;
   padding: 10px 20px;
 }
+
+.navbar{
+    display: flex;
+  gap: 15px;
+}
+.navbar li{
+    list-style-type: none;
+  display: inline;
+  padding: 0 20px;
+  position: relative;
+}
