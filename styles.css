@@ -1,14 +1,42 @@
+*{
+  margin: 0.5em;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body{
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5dc;
-    border: 10px solid #d8cfc4;
-    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+  
 }
-.navigation{
+
+.logo{
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+#header{
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #817465
+}
+
+nav{
+  list-style: none;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #d8cfc4;
-  padding: 10px 20px;
+  justify-content: center;
+  margin: 0.5em 2em;
+  padding: 0;
+  flex-grow: 1;
+  
 }
+
+nav a{
+  margin: 0 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+}
+
