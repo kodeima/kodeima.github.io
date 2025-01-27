@@ -23,7 +23,6 @@ header{
   display: flex;
 }
 
-/* Make it responsive*/
 @media (max-width: 768px){
   .nav-links{
     flex-direction: column; /* Display the navigation links in a column */
@@ -31,14 +30,6 @@ header{
     gap: 20px; /* Add space between the navigation links */
   }
 }
-
-/*header{
-  background-color: white;
-  align-items: center;
-  padding: 10px 10px; 
-  height: 60px;
-  display: flex;
-}*/
 
 #logo{
   width: 70px;
@@ -58,7 +49,7 @@ header{
 
 .nav-links{
   display: flex; /* Display the navigation links in a row */
-  gap: 0.5px; /* Add space between the navigation links */
+  gap: 0; /* Add space between the navigation links */
 }
 
 .nav-links a{
@@ -89,6 +80,41 @@ header{
   filter: brightness(0) saturate(100%) invert(27%) sepia(90%) saturate(500%) hue-rotate(170deg) brightness(105%) contrast(100%);
 }
 
+.content{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5em 15px;
+}
+
+.content h1{
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.content p{
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: #3a3b3c;
+  max-width: 60%;
+}
+
+.button{
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.button:hover{
+  background-color: #0a3772;
+  color: white;
+}
+
 .divider{
   height: 1px;
   background-color: #3a3b3c;
@@ -97,4 +123,26 @@ header{
   position: absolute; /* Removes the divider from the normal document flow */
   top: 100%; /* Position the divider at the bottom of the header */
   left: 0; /* Position the divider at the left side of the header */
+}
+
+.hero-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.hero-image{
+  width: 10%;
+  height: auto;
+  object-fit: contain;
+  margin-right: auto;
+}
+
+.page-divider{
+  height: 1px;
+  background-color: #3a3b3c;
+  margin-top: 5px;
+  width: 77%;
+  margin: 0 auto;
 }
