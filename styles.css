@@ -1,42 +1,91 @@
 *{
-  margin: 0.5em;
-  padding: 0;
-  box-sizing: border-box;
+  font-family: 'Roboto' , sans-serif;
 }
 
 body{
-    font-family: 'Roboto', sans-serif;
-    font-size: 1em;
-  
-}
-
-.logo{
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-}
-
-#header{
-    width: 100%;
-    padding: 10px 20px;
-    background-color: #817465
-}
-
-nav{
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin: 0.5em 2em;
+  background-color: white;
+  margin: 0;
   padding: 0;
-  flex-grow: 1;
-  
 }
 
-nav a{
-  margin: 0 15px;
+.container{
+  max-width: 1200px; /* Set the maximum width of the container */
+  margin: 0 auto; /* Center the container */
+  padding: 0 15px; /* Add padding on the left and right sides of the container */
+  position: relative; /* Keeps the container within its own flow, but allows the absolute element to work */
+}
+
+/* Make it responsive*/
+@media (max-width: 768px){
+  .nav-links{
+    flex-direction: column; /* Display the navigation links in a column */
+    align-items: center;
+    gap: 20px; /* Add space between the navigation links */
+  }
+}
+
+header{
+  background-color: white;
+  align-items: center;
+  padding: 10px 10px; /* Add padding on the top and bottom of the header */
+  height: 60px;
+  display: flex;
+}
+
+#logo{
+  width: 90px;
+  height: 90px;
+  display: block;
+  margin-right: 15px;
+  background-color: transparent;
+
+}
+
+.icon{
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.nav-links{
+  display: flex; /* Display the navigation links in a row */
+  gap: 0.5px; /* Add space between the navigation links */
+}
+
+.nav-links a{
   text-decoration: none;
-  text-transform: uppercase;
-  color: white;
+  color: #3a3b3c;
   font-weight: bold;
+  background-color: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0 5px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
+.nav-links a .icon{
+  font-size: 17px;
+}
+
+.nav-links a:hover{
+  background-color: #f2f2f2;
+  color: #0a3772;
+}
+
+.nav-links a:hover .icon{
+  color: #0a3772;
+  filter: brightness(0) saturate(100%) invert(27%) sepia(90%) saturate(500%) hue-rotate(170deg) brightness(105%) contrast(100%);
+}
+
+.divider{
+  height: 1px;
+  background-color: #3a3b3c;
+  margin-top: 10px;
+  width: 100%;
+  position: absolute; /* Removes the divider from the normal document flow */
+  top: 100%; /* Position the divider at the bottom of the header */
+  left: 0; /* Position the divider at the left side of the header */
+}
