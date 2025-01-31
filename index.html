@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ima's Blog</title>
+    <title>Novel Blog</title>
   </head>
 
   <body>
@@ -13,35 +13,111 @@
         <a href="index.html">
           <img src="images/icons/NovelBlog.png" alt="Ima's Blog Logo" id="logo">
         </a>
+
         <nav class="nav-links">
+
+          <div class="dropdown">
             <a href="discover.html" class="navigation">
               <img src="images/icons/discovericon.svg" alt="Discover Icon" class="icon"> Discover
             </a>
+            <div class="dropdown-content">
+              <a href="newreleases.html">New Releases</a>
+              <a href="genres.html">Genres</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
             <a href="about.html" class="navigation">
               <img src="Images/icons/abouticon.svg" alt="About Icon" class="icon"> About
             </a>
+            <div class="dropdown-content">
+              <a href="contact.html">Contact</a>
+              <a href="team.html">Team</a>
+            </div>
+          </div>
+
             <a href="blog.html" class="navigation">
               <img src="Images/icons/blogicon.svg" alt="Blog Icon" class="icon"> Blog
             </a>
+
+          <div class="dropdown">
             <a href="library.html" class="navigation">
               <img src="Images/icons/libraryicon.svg" alt="Library Icon" class="icon"> Library
             </a>
+            <div class="dropdown-content">
+              <a href="thriller.html">Thriller</a>
+              <a href="sci-fi.html">Sci-fi</a>
+              <a href="romance.html">Romance</a>
+              <a href="mystery.html">Mystery</a>
+              <a href="fantasy.html">Fantasy</a>
+            </div>
+          </div>
+
         </nav>
-        <div class="divider"></div>
+
       </div>
+
+      <div class="divider"></div>
+
     </header>
 
-    <section class="hero-container">
-      <div class="content">
-        <h1>Welcome to Novel Blog</h1>
-        <p>Discover the world of Thriller novels, Sci-fi novels, and much more!</p>
-        <button class="button">Start Reading</button>
+    <!-- Hero Section -->
+     <div class="main-content">
+        <section class="hero-container">
+          <div class="content">
+            <h1>Welcome to Novel Blog</h1>
+            <p>Discover the world of Thriller novels, Sci-fi novels, and much more!</p>
+            <button class="button">Start Reading</button>
+          </div>
+
+          <img src="Images/Books/violetsofthedead.png" alt="Violets of the Dead Book" class="hero-image">
+            
+        </section>
       </div>
-      
-      <img src="Images/Books/violetsofthedead.png" alt="Violets of the Dead Book" class="hero-image">
-      
-    </section>
     <div class="page-divider"></div>
 
+    <footer class="footer">
+      <div class="footer-container">
+        <!--Logo Section-->
+        <div class="footer-logo">
+          <img src="Images/icons/NovelBlog.png" alt="Novel Blog Logo" id="footer-logo">
+          <div class="socials">
+            <a href="https://www.facebook.com/"><img src="Images/icons/facebookicon.svg" alt="Facebook Icon" class="social-icon"></a>
+            <a href="https://www.instagram.com/"><img src="Images/icons/instagramicon.svg" alt="Instagram Icon" class="social-icon"></a>
+            <a href="https://www.twitter.com/"><img src="Images/icons/twittericon.svg" alt="Twitter Icon" class="social-icon"></a>
+          </div>
+        </div>
+
+        <!--Teams Section-->
+        <div class="footer-links">
+          <h3>Teams</h3>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+
+        <!--Contact Section-->
+        <div class="footer-links">
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="mailto:novelblog.official@gmail.com?subject=Help%20%26%20Services">Help & Services</a></li>
+            <li><a href="mailto:novelblog.official@gmail.com?subject=Feedback">Feedback</a></li>
+            <li><a href="mailto:novelblog.official@gmail.com?subject=Translation%20%26%20Editor">Translator & Editor</a></li>
+          </ul>
+        </div>
+
+        <!--Resources Section-->
+        <div class="footer-links">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="termsofservice.html">Terms of Service</a></li>
+            <li><a href="privacypolicy.html">Privacy Policy</a></li>
+            <li><a href="authorresources.html">Author Resources</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </footer>
   </body>
 </html>

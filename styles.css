@@ -2,6 +2,12 @@
   font-family: 'Roboto' , sans-serif;
 }
 
+html, body{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 body{
   background-color: white;
   margin: 0;
@@ -19,15 +25,39 @@ header{
   max-width: 1200px; /* Set the maximum width of the container */
   margin: 0 auto; /* Center the container */
   padding: 0 15px; /* Add padding on the left and right sides of the container */
-  position: relative; /* Keeps the container within its own flow, but allows the absolute element to work */
+  /*position: relative; /* Keeps the container within its own flow, but allows the absolute element to work */
   display: flex;
+}
+
+/* Add a divider to the header */
+.divider{
+  height: 1px;
+  background-color: darkgrey;
+  margin-top: 5px;
+  width: 100%;
+  /*position: absolute; /* Removes the divider from the normal document flow */
+  top: 100%; /* Position the divider at the bottom of the header */
+  left: 0; /* Position the divider at the left side of the header */
+}
+
+/* Add a divider to the header */
+.page-divider{
+  height: 1px;
+  background-color: #3a3b3c;
+  margin-top: 5px;
+  width: 77%;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px){
   .nav-links{
-    flex-direction: column; /* Display the navigation links in a column */
+    flex-direction: row; /* Display the navigation links in a column */
     align-items: center;
-    gap: 20px; /* Add space between the navigation links */
+    gap: 10px; /* Add space between the navigation links */
+  }
+
+  .page-divider{
+    width: 100%;
   }
 }
 
@@ -49,6 +79,7 @@ header{
 
 .nav-links{
   display: flex; /* Display the navigation links in a row */
+  align-items: center;
   gap: 0; /* Add space between the navigation links */
 }
 
@@ -56,7 +87,6 @@ header{
   text-decoration: none;
   color: #3a3b3c;
   font-weight: bold;
-  background-color: none;
   padding: 10px 20px;
   border-radius: 5px;
   margin: 0 5px;
@@ -66,8 +96,16 @@ header{
   gap: 5px;
 }
 
+.nav-links .dropdown,
+.nav-links a{
+  display: inline-flex;
+  align-items: center;
+}
+
 .nav-links a .icon{
   font-size: 17px;
+  height: 24px;
+  width: 24px;
 }
 
 .nav-links a:hover{
@@ -78,6 +116,57 @@ header{
 .nav-links a:hover .icon{
   color: #0a3772;
   filter: brightness(0) saturate(100%) invert(27%) sepia(90%) saturate(500%) hue-rotate(170deg) brightness(105%) contrast(100%);
+}
+
+/* Add a dropdown menu */
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+
+.nav-links .dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 5px;
+  padding: 10px 0;
+}
+
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  top: 40px;
+  border-radius: 5px;
+  padding: 10px 0;
+}
+
+.dropdown-content a{
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: #f2f2f2 0.3s ease; 
+}
+
+.dropdown-content a:hover{
+  background-color: #f2f2f2;
+  color: #0a3772;
+}
+
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+
+/* Add a hero section */
+.main-content{
+  flex: 1;
 }
 
 .content{
@@ -111,18 +200,8 @@ header{
 }
 
 .button:hover{
-  background-color: #0a3772;
-  color: white;
-}
-
-.divider{
-  height: 1px;
-  background-color: #3a3b3c;
-  margin-top: 5px;
-  width: 100%;
-  position: absolute; /* Removes the divider from the normal document flow */
-  top: 100%; /* Position the divider at the bottom of the header */
-  left: 0; /* Position the divider at the left side of the header */
+  background-color: #f2f2f2;
+  color: #0a3772;
 }
 
 .hero-container{
@@ -139,10 +218,88 @@ header{
   margin-right: auto;
 }
 
-.page-divider{
-  height: 1px;
-  background-color: #3a3b3c;
-  margin-top: 5px;
-  width: 77%;
-  margin: 0 auto;
+.footer-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background-color: #e0e0e0;
+}
+
+.footer-logo{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo #footer-logo{
+  max-width: 100px;
+  margin-bottom: 10px;
+}
+
+.socials{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socials a .social-icon{
+  margin-right: 10px;
+  filter: brightness(0) saturate(100%) invert(27%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+  height: 25px;
+  width: 25px;
+}
+
+.socials a:hover{
+  color: #0a3772;
+  filter: brightness(0) saturate(100%) invert(27%) sepia(90%) saturate(500%) hue-rotate(170deg) brightness(105%) contrast(100%);
+}
+
+.footer-links{
+  flex: 1;
+  margin-left: 20px;
+}
+
+.footer-links h3{
+  font-size: 1.05em;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+}
+
+.footer-links ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li{
+  margin-bottom: 5px;
+}
+
+.footer-links ul li a{
+  color: #333333;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.footer-links ul li a:hover{
+  text-decoration: underline;
+}
+
+footer.footer{
+  max-width: 100%;
+}
+
+@media(max-width: 768px){
+  footer.footer{
+    flex-direction: row;
+    text-align: center;
+  }
+
+  .footer-links{
+    margin-bottom: 20px;
+  }
 }
