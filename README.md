@@ -1,2 +1,2 @@
-# Nobleman-Violet
-Nobleman-Violet is a gripping crime thriller set in a world of wealth, intrigue, and mystery.
+# Novel Blog Website
+Just testing out a blog-type website.
