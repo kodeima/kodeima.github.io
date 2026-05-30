@@ -60,17 +60,36 @@ The dataset contains 100 sales transactions and includes:
 
 ## Analysis Performed
 
-### Total revenue calculation
+- Total revenue calculation
 
 ```sql
-SELECT
+select
     round(sum(quantity * unit_price), 2) revenue
     from sales_data;
 ```
----
 
 - Revenue by region
+
+```sql
+select
+    region,
+    round(sum(quantity * unit_price), 2) revenue
+from sales_data
+group by region
+order by revenue desc;
+```
+
+
 - Revenue by product category
+
+```sql
+select
+    category,
+    round(sum(quantity * unit_price), 2) revenue
+from sales_data
+group by category
+order by revenue desc;
+```
 
 ## Product Performance
 
