@@ -1,0 +1,101 @@
+﻿order_id,order_date,customer_id,product,category,region,quantity,unit_price,payment_method
+ORD0001,2025-02-25,CUST7725,Kerosene,Fuel,North,79,105.44,Mobile Money
+ORD0002,2025-09-15,CUST7817,Inverter Battery,Renewable Energy,North,22,247.84,POS
+ORD0003,2025-03-05,CUST1191,Lubricant Oil,Lubricants,South,51,461.92,Cash
+ORD0004,2025-10-24,CUST1334,Diesel,Fuel,East,77,435.69,Cash
+ORD0005,2025-08-20,CUST3582,Industrial Gas,Gas,South,71,1193.26,POS
+ORD0006,2025-10-26,CUST8020,Inverter Battery,Renewable Energy,West,67,295.39,POS
+ORD0007,2025-11-28,CUST2344,Solar Panel,Renewable Energy,West,60,1075.41,Credit
+ORD0008,2025-04-10,CUST4770,Industrial Gas,Gas,West,50,527.19,POS
+ORD0009,2025-11-25,CUST3965,Diesel,Fuel,East,99,177.91,Credit
+ORD0010,2025-07-30,CUST1759,Diesel,Fuel,West,95,818.83,Mobile Money
+ORD0011,2025-05-23,CUST4703,Lubricant Oil,Lubricants,North,19,317.07,POS
+ORD0012,2025-03-30,CUST6354,Solar Panel,Renewable Energy,South,19,1142.92,Bank Transfer
+ORD0013,2025-03-26,CUST7777,Solar Panel,Renewable Energy,North,31,702.14,Bank Transfer
+ORD0014,2025-11-15,CUST7295,Petrol,Fuel,East,47,1048.61,Bank Transfer
+ORD0015,2025-02-15,CUST1720,Petrol,Fuel,South,10,135.57,Cash
+ORD0016,2025-06-20,CUST1651,Solar Panel,Renewable Energy,South,80,54.9,Bank Transfer
+ORD0017,2025-06-08,CUST4598,Lubricant Oil,Lubricants,North,31,1003,Bank Transfer
+ORD0018,2025-02-03,CUST4407,Kerosene,Fuel,North,94,504.98,Bank Transfer
+ORD0019,2025-12-08,CUST9431,Petrol,Fuel,North,46,491.36,POS
+ORD0020,2025-12-09,CUST9434,Inverter Battery,Renewable Energy,East,85,467.28,Mobile Money
+ORD0021,2025-05-24,CUST1961,Solar Panel,Renewable Energy,East,83,741.69,Bank Transfer
+ORD0022,2025-09-27,CUST8733,Lubricant Oil,Lubricants,Central,23,372.14,Bank Transfer
+ORD0023,2025-01-02,CUST8248,Petrol,Fuel,South,13,494.82,Mobile Money
+ORD0024,2025-02-13,CUST1677,Diesel,Fuel,Central,11,283.37,Mobile Money
+ORD0025,2025-03-03,CUST4594,Inverter Battery,Renewable Energy,East,20,292.44,POS
+ORD0026,2025-03-31,CUST2198,Petrol,Fuel,North,92,734.12,Credit
+ORD0027,2025-06-12,CUST9989,Solar Panel,Renewable Energy,West,60,626.08,Credit
+ORD0028,2025-10-21,CUST1214,Petrol,Fuel,North,64,233.57,Credit
+ORD0029,2025-06-30,CUST4844,Petrol,Fuel,East,95,388.94,POS
+ORD0030,2025-06-29,CUST1394,Kerosene,Fuel,South,36,526.85,Mobile Money
+ORD0031,2025-08-26,CUST2551,Solar Panel,Renewable Energy,South,29,867.46,Mobile Money
+ORD0032,2025-11-05,CUST8723,LPG Cylinder Refill,Gas,Central,84,785.24,POS
+ORD0033,2025-10-31,CUST2167,Solar Panel,Renewable Energy,South,48,522.38,Credit
+ORD0034,2025-11-19,CUST1265,Inverter Battery,Renewable Energy,South,47,1028.22,Cash
+ORD0035,2025-02-27,CUST4552,Kerosene,Fuel,South,31,879.1,Mobile Money
+ORD0036,2025-10-28,CUST9140,Diesel,Fuel,West,63,463.07,POS
+ORD0037,2025-01-05,CUST7672,LPG Cylinder Refill,Gas,North,27,1007.62,POS
+ORD0038,2025-03-11,CUST8184,LPG Cylinder Refill,Gas,East,44,42.81,Cash
+ORD0039,2025-06-10,CUST2465,Lubricant Oil,Lubricants,Central,80,371.45,Credit
+ORD0040,2025-03-29,CUST9135,LPG Cylinder Refill,Gas,West,40,502.1,Credit
+ORD0041,2025-03-02,CUST6015,LPG Cylinder Refill,Gas,East,5,234.29,Bank Transfer
+ORD0042,2025-08-21,CUST2286,Lubricant Oil,Lubricants,South,76,859.78,Mobile Money
+ORD0043,2025-06-27,CUST9984,Diesel,Fuel,North,83,199.69,POS
+ORD0044,2025-06-28,CUST9483,Industrial Gas,Gas,East,42,531.44,POS
+ORD0045,2025-04-19,CUST9498,LPG Cylinder Refill,Gas,East,94,1130.59,Bank Transfer
+ORD0046,2025-07-03,CUST3469,Inverter Battery,Renewable Energy,East,5,169.74,Credit
+ORD0047,2025-04-15,CUST4530,LPG Cylinder Refill,Gas,South,54,27.87,Mobile Money
+ORD0048,2025-09-09,CUST9189,Inverter Battery,Renewable Energy,West,5,95.36,Cash
+ORD0049,2025-04-29,CUST1162,Diesel,Fuel,North,24,848.95,Mobile Money
+ORD0050,2025-01-17,CUST8648,Kerosene,Fuel,South,95,870.27,Bank Transfer
+ORD0051,2025-02-02,CUST2355,Petrol,Fuel,North,29,354.8,POS
+ORD0052,2025-10-22,CUST3978,LPG Cylinder Refill,Gas,North,87,615.59,Mobile Money
+ORD0053,2025-11-28,CUST2440,Lubricant Oil,Lubricants,East,98,1085.85,POS
+ORD0054,2025-10-13,CUST8889,Industrial Gas,Gas,Central,81,1079.86,Mobile Money
+ORD0055,2025-09-13,CUST6881,LPG Cylinder Refill,Gas,South,7,855.3,Bank Transfer
+ORD0056,2025-07-07,CUST2558,LPG Cylinder Refill,Gas,East,56,574.24,Cash
+ORD0057,2025-03-10,CUST4380,Petrol,Fuel,East,24,998.42,POS
+ORD0058,2025-09-15,CUST9063,Solar Panel,Renewable Energy,East,21,1050.54,POS
+ORD0059,2025-09-30,CUST4218,Diesel,Fuel,East,65,743.42,Mobile Money
+ORD0060,2025-02-19,CUST1825,Inverter Battery,Renewable Energy,West,89,656.16,Bank Transfer
+ORD0061,2025-01-27,CUST6447,Lubricant Oil,Lubricants,West,82,662.24,Credit
+ORD0062,2025-10-16,CUST7347,Kerosene,Fuel,North,55,380.63,Bank Transfer
+ORD0063,2025-03-15,CUST2413,LPG Cylinder Refill,Gas,Central,31,154.26,POS
+ORD0064,2025-11-29,CUST9316,Kerosene,Fuel,West,67,1018.09,Mobile Money
+ORD0065,2025-06-07,CUST2813,Kerosene,Fuel,North,89,227.22,Bank Transfer
+ORD0066,2025-05-22,CUST2351,Lubricant Oil,Lubricants,West,76,957.73,Cash
+ORD0067,2025-08-12,CUST8617,LPG Cylinder Refill,Gas,East,15,939.2,Cash
+ORD0068,2025-04-30,CUST2302,Lubricant Oil,Lubricants,West,100,1189.7,Bank Transfer
+ORD0069,2025-04-09,CUST2271,Inverter Battery,Renewable Energy,South,48,1065.77,POS
+ORD0070,2025-10-29,CUST6119,Petrol,Fuel,North,50,1063.49,Credit
+ORD0071,2025-08-07,CUST2366,Industrial Gas,Gas,North,86,571.42,Bank Transfer
+ORD0072,2025-08-07,CUST3185,Lubricant Oil,Lubricants,Central,7,959,Credit
+ORD0073,2025-09-23,CUST1135,Lubricant Oil,Lubricants,South,39,898.96,Cash
+ORD0074,2025-03-07,CUST1255,Inverter Battery,Renewable Energy,North,29,995.11,Credit
+ORD0075,2025-09-22,CUST8196,Industrial Gas,Gas,Central,19,802.93,Mobile Money
+ORD0076,2025-02-15,CUST6652,Inverter Battery,Renewable Energy,North,9,192.3,Credit
+ORD0077,2025-06-15,CUST9037,Diesel,Fuel,Central,78,941.1,Credit
+ORD0078,2025-10-31,CUST9748,LPG Cylinder Refill,Gas,West,40,115.93,Credit
+ORD0079,2025-08-12,CUST6536,Diesel,Fuel,West,88,44.29,Mobile Money
+ORD0080,2025-03-01,CUST9734,Inverter Battery,Renewable Energy,Central,99,290.04,Bank Transfer
+ORD0081,2025-04-05,CUST8526,Inverter Battery,Renewable Energy,North,61,620.59,Mobile Money
+ORD0082,2025-07-05,CUST7913,Industrial Gas,Gas,East,8,1043.05,POS
+ORD0083,2025-08-25,CUST9617,Inverter Battery,Renewable Energy,East,40,638.55,POS
+ORD0084,2025-07-25,CUST5936,Inverter Battery,Renewable Energy,East,69,302.43,Mobile Money
+ORD0085,2025-08-08,CUST8474,Kerosene,Fuel,Central,63,1094.1,Mobile Money
+ORD0086,2025-07-05,CUST1528,Inverter Battery,Renewable Energy,East,85,1138.99,Cash
+ORD0087,2025-11-18,CUST2234,Inverter Battery,Renewable Energy,Central,39,829.61,Cash
+ORD0088,2025-03-15,CUST9109,Solar Panel,Renewable Energy,North,19,735.4,POS
+ORD0089,2025-05-27,CUST6864,Lubricant Oil,Lubricants,West,14,1036.09,Bank Transfer
+ORD0090,2025-02-15,CUST8730,Diesel,Fuel,East,89,715.25,Mobile Money
+ORD0091,2025-08-21,CUST1354,LPG Cylinder Refill,Gas,South,92,857.93,Cash
+ORD0092,2025-05-30,CUST9392,LPG Cylinder Refill,Gas,West,57,117.83,Bank Transfer
+ORD0093,2025-05-13,CUST4512,Inverter Battery,Renewable Energy,North,59,836.25,Cash
+ORD0094,2025-02-01,CUST6344,Lubricant Oil,Lubricants,West,66,350.52,Bank Transfer
+ORD0095,2025-07-24,CUST4628,Solar Panel,Renewable Energy,North,19,708.06,Bank Transfer
+ORD0096,2025-05-04,CUST6179,LPG Cylinder Refill,Gas,West,30,1090.08,Cash
+ORD0097,2025-02-23,CUST8440,Industrial Gas,Gas,Central,91,551.25,Cash
+ORD0098,2025-09-21,CUST7334,Kerosene,Fuel,East,55,663.03,POS
+ORD0099,2025-03-29,CUST4895,LPG Cylinder Refill,Gas,East,96,378.73,Bank Transfer
+ORD0100,2025-06-26,CUST5433,Lubricant Oil,Lubricants,Central,33,354.84,Cash
