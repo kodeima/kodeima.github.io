@@ -140,7 +140,7 @@ order by revenue desc;
 ```
 
 ---
----
+
 
 ## Time Analysis
 
