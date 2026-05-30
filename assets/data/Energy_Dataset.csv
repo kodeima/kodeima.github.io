@@ -1,4 +1,4 @@
-﻿order_id,order_date,customer_id,product,category,region,quantity,unit_price,payment_method
+order_id,order_date,customer_id,product,category,region,quantity,unit_price,payment_method
 ORD0001,2025-02-25,CUST7725,Kerosene,Fuel,North,79,105.44,Mobile Money
 ORD0002,2025-09-15,CUST7817,Inverter Battery,Renewable Energy,North,22,247.84,POS
 ORD0003,2025-03-05,CUST1191,Lubricant Oil,Lubricants,South,51,461.92,Cash
