@@ -42,7 +42,7 @@ The business needed answers to:
 
 You can download the full dataset used in this project below:
 
-[Download Energy Dataset](/assets/data/Energy_Dataset.xlsx)
+[Download Energy Dataset](/assets/data/Energy_Dataset.csv)
 
 The dataset contains 100 sales transactions and includes:
 
