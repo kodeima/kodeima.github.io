@@ -94,7 +94,6 @@ order by revenue desc;
 ```
 
 ---
----
 
 ## Product Performance
 
