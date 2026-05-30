@@ -140,8 +140,30 @@ order by revenue desc;
 ```
 
 ---
+---
 
 ## Time Analysis
 
 - Monthly sales trends
+
+```sql
+select
+    date_format(oder_date, '%y-%m') month,
+    round(sum(quantity * unit_price), 2) revenue
+from sales_data
+group by month
+order by month;
+```
+
+---
+
 - Peak sales periods
+
+```sql
+select
+    date_format(order_date, '%y-%m') month,
+    round(sum(quantity * unit_price), 2) revenue
+from sales_data
+group by month
+order by revenue desc;
+```
