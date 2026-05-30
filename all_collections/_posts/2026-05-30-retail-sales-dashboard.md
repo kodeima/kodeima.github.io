@@ -7,13 +7,18 @@ categories: [data-analysis, sql, powerbi, business-intelligence]
 
 # Retail Sales Performance Analysis (SQL + Power BI)
 
-## Project Overview
-
-This project analyses retail sales data to uncover key business insights around revenue, product performance, and regional trends. The goal was to simulate a real-world business reporting system that helps stakeholders make data-driven decisions.
 
 ---
 
 ## Business Problems
+
+### Overview
+
+This project analyses retail sales data to uncover key business insights around revenue, product performance, and regional trends. The goal was to simulate a real-world business reporting system that helps stakeholders make data-driven decisions.
+
+### Business Problem
+
+Retail businesses generate large volumes of transaction data but often struggle to convert that data into actionable insignts. This project demonstrates how sales data can be transformed into meaningful information for decision-making.
 
 The business needed answers to:
 
@@ -24,27 +29,55 @@ The business needed answers to:
 
 ---
 
-## Tools
+## Tools Used
 
-- SQL (MySQL) for data exttraction and transformation
-- Power BI for dashboard visualisation
-- Excel for initial data cleaning and validation
+- SQL (MySQL) for data extraction and transformation
+- Power BI for dashboard development and visualisation
+- Excel for initial data creation and validation
+- GitHub Pages for project documentation and portfolio presentation
 
 ---
 
 ## Dataset Download
 
-You can download thee full dataset used in this project below:
+You can download the full dataset used in this project below:
 
 [Download Energy Dataset](/assets/data/Energy_Dataset.xlsx)
 
-## Data Preparation
+The dataset contains 100 sales transactions and includes:
 
-Using SQL, I cleaned and structured raw sales data by:
+- Order ID
+- Order Date
+- Customer ID
+- Product
+- Category
+- Region
+- Quantity
+- Unit Price
+- Payment Method
 
-- Standardizing product and region names
-- Creating calculated fields for:
-    - Total revenue
-    - Profit margin
-    - Monthly sales aggregation
+---
 
+## Analysis Performed
+
+### Total revenue calculation
+
+```sql
+SELECT
+    round(sum(quantity * unit_price), 2) revenue
+    from sales_data;
+```
+---
+
+- Revenue by region
+- Revenue by product category
+
+## Product Performance
+
+- Top-selling products
+- Category comparison
+
+## Time Analysis
+
+- Monthly sales trends
+- Peak sales periods
