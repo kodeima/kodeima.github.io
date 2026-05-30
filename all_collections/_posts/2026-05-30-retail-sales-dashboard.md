@@ -97,8 +97,48 @@ order by revenue desc;
 
 ## Product Performance
 
-- Top-selling products
-- Category comparison
+- Top-selling products by revenue
+
+```sql
+select
+    product,
+    round(sum(quantity * unit_price), 2) revenue
+    from sales_data
+    group by product
+    oder by revenue desc
+    limit 10;
+```
+
+---
+
+- Top-selling products by quantity
+
+```sql
+select
+    product,
+    sum(quantity) units_sold
+from sales_data
+group by product
+order by units_sold desc
+limit 10;
+```
+
+---
+
+- Category Comparison
+
+```sql
+select
+    category,
+    count(*) as orders,
+    sum(quantity) as units_sold,
+    round(sum(quantity * unit_price), 2) revenue
+from sales_data
+group by category
+order by revenue desc;
+```
+
+---
 
 ## Time Analysis
 
