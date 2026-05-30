@@ -68,6 +68,8 @@ select
     from sales_data;
 ```
 
+---
+
 - Revenue by region
 
 ```sql
@@ -78,7 +80,7 @@ from sales_data
 group by region
 order by revenue desc;
 ```
-
+---
 
 - Revenue by product category
 
@@ -90,6 +92,8 @@ from sales_data
 group by category
 order by revenue desc;
 ```
+
+---
 
 ## Product Performance
 
