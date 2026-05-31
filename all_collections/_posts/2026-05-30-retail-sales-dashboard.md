@@ -102,7 +102,7 @@ From the results we can see that Fuel contributes the most to the total revenue.
 
 Although it generates the most revenue, fuel itself has very low margins.
 
-Therefore fuel was the highest-performing category, generating $1,073,467.12 in revenue and contributing 31.74% of total revenue during the analysis period. This performance appears to be driven primarily by high sales volume rather than premium pricing.
+Therefore fuel was the highest-performing category, generating **$1,073,467.12** in revenue and contributing **31.74%** of total revenue during the analysis period. This performance appears to be driven primarily by high sales volume rather than premium pricing.
 
 ---
 
@@ -126,7 +126,7 @@ select
 
 Analysis of product-level revenue revealed that **Lubricant Oil** was the highest performing individual product, generating **$607,889.95** in revenue, followed by **Inverter Battery ($552,094.45)** and **LPG Cylinder ($493,999.91)**.
 
-While the fuel category contributed the largest share of overall revenue (31.74% of total revenue), a deeper product-level analysis showed that no single fuel product was the top revenue generator. Instead, the category's strong performance was driven by the combined sales of muultiple fuel products, including Kerosene, Diesel, and Petrol. 
+While the fuel category contributed the largest share of overall revenue **(31.74% of total revenue)**, a deeper product-level analysis showed that no single fuel product was the top revenue generator. Instead, the category's strong performance was driven by the combined sales of muultiple fuel products, including Kerosene, Diesel, and Petrol. 
 
 This distinction is important because it suggests that the fuel category's success is primarily volume-driven and diversified across several products, rather than dependent on a single high-performing item.
 
