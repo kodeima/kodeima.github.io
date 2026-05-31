@@ -213,7 +213,7 @@ Revenue trended upwards throughout the year, with stronger performance observed 
 
 Sales peaked in November, generating **$452,688.98** in revenue, followed by August with **$422,461.58**. These months significantly outperformed the annual average.
 
-The query was used average monthly revenue:
+The query was used to generate average monthly revenue:
 
 ```sql
 select
