@@ -126,7 +126,7 @@ select
 
 Analysis of product-level revenue revealed that **Lubricant Oil** was the highest performing individual product, generating **$607,889.95** in revenue, followed by **Inverter Battery ($552,094.45)** and **LPG Cylinder ($493,999.91)**.
 
-While the fuel category contributed the largest share of overall revenue **(31.74% of total revenue)**, a deeper product-level analysis showed that no single fuel product was the top revenue generator. Instead, the category's strong performance was driven by the combined sales of muultiple fuel products, including Kerosene, Diesel, and Petrol. 
+While the fuel category contributed the largest share of overall revenue **(31.74% of total revenue)**, a deeper product-level analysis showed that no single fuel product was the top revenue generator. Instead, the category's strong performance was driven by the combined sales of multiple fuel products, including Kerosene, Diesel, and Petrol. 
 
 This distinction is important because it suggests that the fuel category's success is primarily volume-driven and diversified across several products, rather than dependent on a single high-performing item.
 
@@ -145,6 +145,37 @@ group by product
 order by units_sold desc
 limit 10;
 ```
+
+[View Output Here](/assets/data/top_prod_by_unit.csv)
+
+Comparing the result of Revenue rank vs Quantity sold rank
+
+|       Product       |  Revenue Rank    |  Quantity Sold Rank    |
+| :------------------ | :--------------- | :--------------------- |
+|    Lubricant oil    |        1         |           3            |
+|   Inverter Battery  |        2         |           1            |
+| LPG Cylinder Refill |        3         |           2            |
+|      Kerosene       |        4         |           5            |
+|       Diesel        |        5         |           4            |
+
+To get revenue per unit sold, the query was used:
+
+```sql
+select
+    product,
+    round(sum(quantity * unit_price) / sum(quantity), 2) revenue_per_unit
+from sales_data
+group by product
+order by revenue_per_unit desc;
+```
+
+[View Output Here](/assets/data/rev_per_unit.csv)
+
+Product performance varied significantly depending on the metric used. Inverter batteries recorded the highest sales volume **(878 units)**, indicating strong customer demand. Lubricant oil generated the highest total revenue **(607,889.95)**, demonstrating the strongest overall financial contribution.
+
+Meanwhile, Industrial gas produced the highest revenue per unit **($767.36)**, suggesting a premium-value product with lower sales volume. 
+
+These findings highlight the importance of evaluating product performance through multiple dimensions rather than relying on a single metric.
 
 ---
 
