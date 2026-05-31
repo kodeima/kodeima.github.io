@@ -5,13 +5,6 @@ date: 2026-05-30
 categories: [data-analysis, sql, powerbi, business-intelligence]
 ---
 
-# Retail Sales Performance Analysis (SQL + Power BI)
-
-
----
-
-## Business Problems
-
 ### Overview
 
 This project analyses retail sales data to uncover key business insights around revenue, product performance, and regional trends. The goal was to simulate a real-world business reporting system that helps stakeholders make data-driven decisions.
@@ -29,7 +22,7 @@ The business needed answers to:
 
 ---
 
-## Tools Used
+### Tools Used
 
 - SQL (MySQL) for data extraction and transformation
 - Power BI for dashboard development and visualisation
@@ -38,11 +31,11 @@ The business needed answers to:
 
 ---
 
-## Dataset Download
+### Dataset Download
 
 You can download the full dataset used in this project below:
 
-[Download Energy Dataset](/assets/data/Energy_Dataset.csv)
+[Download Energy_Dataset.csv](/assets/data/Energy_Dataset.csv)
 
 The dataset contains 100 sales transactions and includes:
 
@@ -56,9 +49,11 @@ The dataset contains 100 sales transactions and includes:
 - Unit Price
 - Payment Method
 
+Please note all result outputs have been converted to CSV files
+
 ---
 
-## Analysis Performed
+### Analysis Performed
 
 - Total revenue calculation
 
@@ -67,6 +62,10 @@ select
     round(sum(quantity * unit_price), 2) revenue
     from sales_data;
 ```
+
+This answers the question of total revenue from the earliest date to latest.
+
+[View Output Here](/assets/data/total_rev.csv)
 
 ---
 
@@ -80,6 +79,11 @@ from sales_data
 group by region
 order by revenue desc;
 ```
+
+The region that generates the most revenue is seen to be East, and the regions that are underperforming are South and Central.
+
+[View Output Here](/assets/data/rev_by_reg.csv)
+
 ---
 
 - Revenue by product category
