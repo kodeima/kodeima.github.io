@@ -124,7 +124,7 @@ select
 
 #### Product Performance Analysis
 
-Analysis of product-level revenue revealed that **Lubricant Oil** was the highest performing individual product, generating **$607,889.95** in revenue, followed by **Inverter Battery ($552,094.45)** and **LPG Cylinder ($493,999.91)**.
+Analysis of product-level revenue revealed that **Lubricant Oil** was the highest performing individual product, generating **$607,889.95** in revenue, followed by **Inverter Battery ($552,094.45)** and **LPG Cylinder Refill ($493,999.91)**.
 
 While the fuel category contributed the largest share of overall revenue **(31.74% of total revenue)**, a deeper product-level analysis showed that no single fuel product was the top revenue generator. Instead, the category's strong performance was driven by the combined sales of multiple fuel products, including Kerosene, Diesel, and Petrol. 
 
@@ -171,26 +171,12 @@ order by revenue_per_unit desc;
 
 [View Output Here](/assets/data/rev_per_unit.csv)
 
-Product performance varied significantly depending on the metric used. Inverter batteries recorded the highest sales volume **(878 units)**, indicating strong customer demand. Lubricant oil generated the highest total revenue **(607,889.95)**, demonstrating the strongest overall financial contribution.
+Product performance varied significantly depending on the metric used. Inverter batteries recorded the highest sales volume **(878 units)**, indicating strong customer demand. Lubricant oil generated the highest total revenue **($607,889.95)**, demonstrating the strongest overall financial contribution.
 
 Meanwhile, Industrial gas produced the highest revenue per unit **($767.36)**, suggesting a premium-value product with lower sales volume. 
 
 These findings highlight the importance of evaluating product performance through multiple dimensions rather than relying on a single metric.
 
----
-
-- Category Comparison
-
-```sql
-select
-    category,
-    count(*) as orders,
-    sum(quantity) as units_sold,
-    round(sum(quantity * unit_price), 2) revenue
-from sales_data
-group by category
-order by revenue desc;
-```
 
 ---
 
@@ -201,22 +187,48 @@ order by revenue desc;
 
 ```sql
 select
-    date_format(oder_date, '%y-%m') month,
+    date_format(order_date, '%y-%m') month,
     round(sum(quantity * unit_price), 2) revenue
 from sales_data
 group by month
 order by month;
 ```
 
----
+[View Output Here](/assets/data/mon_sales_trend.csv)
 
-- Peak sales periods
+#### First observation: Revenue increased during the year
+
+The beginning of the year was weak:
+
+1. January: $170,617.73
+2. February: $294,896.21
+3. March: $300,213.64
+
+Revenue trended upwards throughout the year, with stronger performance observed during the second half of the reporting period.
+
+#### Second observation: August and November were peak months
+
+1. November: $452,688.98
+2. August: $422,461.58
+
+Sales peaked in November, generating **$452,688.98** in revenue, followed by August with **$422,461.58**. These months significantly outperformed the annual average.
+
+The query was used average monthly revenue:
 
 ```sql
 select
-    date_format(order_date, '%y-%m') month,
-    round(sum(quantity * unit_price), 2) revenue
-from sales_data
-group by month
-order by revenue desc;
+    round(avg(monthly_revenue),2) avg_monthly_revenue
+from (
+    select
+        date_format(order_date, '%y-%m') month,
+        sum(quantity * unit_price) monthly_revenue
+    from sales_data
+    group by month
+) t;
 ```
+
+[View Output Here](/assets/data/avg_monthly_rev.csv)
+
+The business generated an avergae monthly revenue of **$281,872.39** during the analysis period.
+
+November was the strongest performing month, generating **$452,688.98**, which was approximately 60.6% above the monthly average.
