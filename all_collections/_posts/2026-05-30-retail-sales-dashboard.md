@@ -232,3 +232,8 @@ from (
 The business generated an avergae monthly revenue of **$281,872.39** during the analysis period.
 
 November was the strongest performing month, generating **$452,688.98**, which was approximately 60.6% above the monthly average.
+
+---
+
+## Power BI Dashboard
+
