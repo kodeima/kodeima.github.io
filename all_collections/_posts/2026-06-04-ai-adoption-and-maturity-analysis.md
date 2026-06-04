@@ -42,3 +42,110 @@ df = df.dropna(subset=['industry', 'country', 'ai_maturity_score', 'ai_adoption_
 ```
 
 **Why this matters:** Coercing the `year` column and removing nulls in key analytical columns ensures that all downstream aggregations and groth calculations operated on clean, consistent data. Preventing silent errors in the CAGR computation.
+
+---
+
+#### Feature Engineering - CAGR by Industry
+
+To quantify the pace of AI adoption (not just current levels), I computed the **Compound Annual Growth Rate** for each industry's mean AI maturity score over the full 10-year window.
+
+```python
+
+# CAGR = (Ending Value / Beginning Value)**(1 / Number of Years) - 1
+growth = industry_trends.groupby('industry').apply(
+    lambda x:
+    (
+        (x.loc[x['year'] == 2025, 'ai_maturity_score'].values[0] / 
+        x.loc[x['year'] == 2015, 'ai_maturity_score'].values[0]) ** (1/10) - 1
+    )
+).reset_index(name='CAGR')
+
+```
+
+CAGR was chosen over simple year-over-year growth because it smooths volatility and provides a standardised, single-number comparator across industries. This is the same metric used in financial and strategic planning contexts.
+
+---
+
+#### Aggregations
+
+```python
+
+# Industry-level and country-level time series
+industry_trends = df.groupby(['industry', 'year'])['ai_maturity_score'].mean().reset_index()
+
+country_trends = df.groupby(['country', 'year'])['ai_maturity_score'].mean().reset_index()
+
+# Cross-dimensional  breakdown
+country_industry = df.groupby(['country', 'industry'])['ai_maturity_score'].mean().reset_index()
+```
+
+#### Visualisations
+
+Five interactive charts were produced using Plotly Express:
+
+1. AI Maturity Trends by Industry (2015-2025)
+
+**Purpose:** Track industry-level maturity trajectories over time.
+
+```python
+
+fig = px.line(
+    industry_trends,
+    x='year', y-'ai_maturity_score',
+    color='industry',
+    title="AI Maturity Trends by Industry (2015 - 2025)"
+)
+
+fig.show()
+
+```
+
+![AI Maturity Trends by Industry Chart](/assets/data/ai_maturity_trends_by_industry.png)
+
+
+2. AI Maturity Trends by Country (2015 - 2025)
+
+**Purpose:** Compare national adoption curves across the decade
+
+```python
+
+fig = px.line(
+    country_trends,
+    x='year', y-'ai_maturity_score',
+    color='country',
+    title="AI Maturity Trends by Country (2015 - 2025)"
+)
+
+fig.show()
+
+```
+
+![AI Maturity Trends by Country Chart](/assets/data/ai_maturity_trends_by_country.png)
+
+3. Average AI Maturity by Country 
+
+**Purpose:** Rank countries by mean maturity score
+
+```python
+
+country_avg_df = (
+    df.groupby('country')['ai_maturity_score'].mean().reset_index()
+)
+fig = px.bar(
+    country_avg_df,
+    x='country',
+    y='ai_maturity_score',
+    title='Average AI Maturity by Country'
+)
+
+fig.show()
+
+```
+
+![Average AI Maturity by Country Chart](/assets/data/avg_ai_maturity_by_country.png)
+
+---
+
+#### Key Findings
+
+1. 
