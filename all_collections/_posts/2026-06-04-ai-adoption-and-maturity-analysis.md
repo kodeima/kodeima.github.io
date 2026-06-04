@@ -257,8 +257,8 @@ This section is included intentionally.
 |     Error        |    Root Cause    |    Resolution    |
 | :--------------- | :--------------- | :--------------- |
 | `FileNotFoundError: corporate_ai_adoption.csv`| Wrong filename - dataset uses `_dataset` suffix | Corrected to `corporate_ai_adoption_dataset.csv`|
-| `AttributeError: module 'pandas' has no attribute 'to_numerical' | Typo - correct method is `to_numeric` | Corrected to `pd.to_numeric()` |
-| `ValueError: 'aimaturity_score' is not a column | Missing underscore in column name | Corrected to `ai_maturity_score` |
+| `AttributeError: module 'pandas' has no attribute 'to_numerical'` | Typo - correct method is `to_numeric` | Corrected to `pd.to_numeric()` |
+| `ValueError: 'aimaturity_score' is not a column` | Missing underscore in column name | Corrected to `ai_maturity_score` |
 | `NameError: 'fig' is not defined` | Attempted `fig.show()` before figure was assigned | Reordered code to define figure before calling `.show()` |
 | CAGR formula dividing 2025 by 2025 | Copy-paste error - both values referenced `year==2025` | Corrected denominator to `year==2015` |
 
