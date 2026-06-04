@@ -203,6 +203,8 @@ cagr_fig.show()
 
 **Insight:** Agriculture recorded the highest AI maturity score in 2025. This suggests that AI adoption in agriculture has grown significantly over the period. Healthcare, despite its investment in technology, showed lower maturity scores compared to several other industries.
 
+---
+
 2. Fastest-Growing Industries by CAGR
 
 |     Industry       |    CAGR (2015 - 2025)    |
@@ -214,6 +216,8 @@ cagr_fig.show()
 | Retail             |          6.34%           |
 
 **Insight:** Telecom recorded the highest compound annual growth rate (CAGR) in AI maturity between 2015 and 2025, slightly ahead of Agriculture. The top five industries all showed similar growth rates (around 6.3%–6.5%), suggesting that AI adoption increased steadily across multiple sectors rather than being driven by a single industry.
+
+---
 
 3. Country-Level AI Maturity - Rankings
 
@@ -237,6 +241,8 @@ cagr_fig.show()
 
 **Insight:** The ranking shows a concentration of higher AI maturity scores among countries with established technology sectors, including the United States, United Kingdom, and Singapore. This may reflect greater access to AI talent, digital infrastructure, and investment. 
 However, the relatively narrow range between the highest score (6.60) and the lowest score (5.57) suggests that AI adoption is not limited to a small group of countries. Adoption appears to be expanding globally, with most countries showing comparable levels of maturity.
+
+---
 
 4. Does Geography Drive AI Maturity?
 
