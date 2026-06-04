@@ -83,7 +83,7 @@ country_industry = df.groupby(['country', 'industry'])['ai_maturity_score'].mean
 
 Five interactive charts were produced using Plotly Express:
 
-1. AI Maturity Trends by Industry (2015-2025)
+* **1. AI Maturity Trends by Industry (2015-2025)**
 
 **Purpose:** Track industry-level maturity trajectories over time.
 
@@ -103,7 +103,7 @@ fig.show()
 ![AI Maturity Trends by Industry Chart](/assets/data/ai_maturity_trends_by_industry.png)
 
 
-2. AI Maturity Trends by Country (2015 - 2025)
+* **2. AI Maturity Trends by Country (2015 - 2025)**
 
 **Purpose:** Compare national adoption curves across the decade
 
@@ -122,7 +122,7 @@ fig.show()
 
 ![AI Maturity Trends by Country Chart](/assets/data/ai_maturity_trends_by_country.png)
 
-3. Average AI Maturity by Country 
+* **3. Average AI Maturity by Country** 
 
 **Purpose:** Rank countries by mean maturity score
 
