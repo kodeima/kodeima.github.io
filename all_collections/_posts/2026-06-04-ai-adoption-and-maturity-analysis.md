@@ -83,7 +83,7 @@ country_industry = df.groupby(['country', 'industry'])['ai_maturity_score'].mean
 
 Five interactive charts were produced using Plotly Express:
 
-* **1. AI Maturity Trends by Industry (2015-2025)**
+* **AI Maturity Trends by Industry (2015-2025)**
 
 **Purpose:** Track industry-level maturity trajectories over time.
 
@@ -103,7 +103,7 @@ fig.show()
 ![AI Maturity Trends by Industry Chart](/assets/data/ai_maturity_trends_by_industry.png)
 
 
-* **2. AI Maturity Trends by Country (2015 - 2025)**
+* **AI Maturity Trends by Country (2015 - 2025)**
 
 **Purpose:** Compare national adoption curves across the decade
 
@@ -122,7 +122,7 @@ fig.show()
 
 ![AI Maturity Trends by Country Chart](/assets/data/ai_maturity_trends_by_country.png)
 
-* **3. Average AI Maturity by Country** 
+* **Average AI Maturity by Country** 
 
 **Purpose:** Rank countries by mean maturity score
 
@@ -143,6 +143,44 @@ fig.show()
 ```
 
 ![Average AI Maturity by Country Chart](/assets/data/avg_ai_maturity_by_country.png)
+
+* **Average AI Maturity by Country and Industry**
+
+**Purpose:** Surface country x industry interaction effects
+
+```python
+
+fig = px.bar(
+    country_industry,
+    x='country',
+    y='ai_maturity_score',
+    color='industry',
+    title='Average AI Maturity by Country and Industry'
+)
+
+fig.show()
+
+```
+
+![Average AI Maturity by Country and Industry Chart](/assets/data/avg_ai_maturity_by_country_industry.png)
+
+* **AI Maturity CAGR by Industry (2015 - 2025)**
+
+**Purpose:** Identify fastest-growing sectors by growth rate
+
+```python
+
+cagr_fig = px.bar(
+    growth,
+    x='industry',
+    y='CAGR',
+    title='AI Maturity CAGR by Industry (2015-2025)'
+)
+cagr_fig.show()
+
+```
+
+![AI Maturity CAGR by Industry Chart](/assets/data/ai_maturity%20cagr%20by%20industry.png)
 
 ---
 
