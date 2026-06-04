@@ -186,7 +186,7 @@ cagr_fig.show()
 
 #### Key Findings
 
-1. Industry Maturity in 2025 - Rankings
+##### 1. Industry Maturity in 2025 - Rankings
 
 |     Industry       | AI Maturity Score (2025) |
 | :----------------- | :----------------------- |
@@ -205,7 +205,7 @@ cagr_fig.show()
 
 ---
 
-2. Fastest-Growing Industries by CAGR
+##### 2. Fastest-Growing Industries by CAGR
 
 |     Industry       |    CAGR (2015 - 2025)    |
 | :----------------- | :----------------------- |
@@ -219,7 +219,7 @@ cagr_fig.show()
 
 ---
 
-3. Country-Level AI Maturity - Rankings
+##### 3. Country-Level AI Maturity - Rankings
 
 |     Country        |  Avg. AI Maturity Score  |
 | :----------------- | :----------------------- |
@@ -244,7 +244,7 @@ However, the relatively narrow range between the highest score (6.60) and the lo
 
 ---
 
-4. Does Geography Drive AI Maturity?
+##### 4. Does Geography Drive AI Maturity?
 
 Average AI maturity scores varied more across countries than across industries. Country scores ranged from 5.57 (Brazil) to 6.60 (United States), while industry averages remained relatively close together. This suggests that geographical location may have a greater influence on AI maturity than industry type. Factors such as access to technology, digital infrastructure, investment, and skilled talent may contribute to these differences.
 
