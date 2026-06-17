@@ -103,7 +103,7 @@ The analysis shows that FIFA has progressively expanded participation over time,
 
 * **Did More Participating Teams Lead to More Goals Being Scored?**
 
-A scatter plor was created to examine the relationship between the number of teams and total goals scored.
+A scatter plot was created to examine the relationship between the number of teams and total goals scored.
 
 ```python
 df[['Teams', 'Total_Goals', 'Year']]
@@ -115,6 +115,8 @@ plt.show()
 
 ```
 
+![Teams to Goals Scored](/assets/data/teams-to-goals.png)
+
 A correlation coefficient was then calculated.
 
 ```python
@@ -125,3 +127,78 @@ The correlation value between Teams and Total Goals is **0.89**. This indicates 
 As more teams participated, the total number of goals generally increased.
 However, this increase is likely influenced by the larger number of matches played in expanded tournaments, which creates more scoring opportunities.
 
+* **Did More Teams Lead to More Goals Per Match?**
+
+To determine whether tournament expansion affected scoring efficiency, a second correlation analysis was performed between the participating team and average goal scored per match.
+
+```python
+df[['Teams', 'Goals_Per_Match']].corr()
+```
+
+The correlation value between Teams and Goals Per Match is **-0.61**. This indicates a moderate negative relationship.
+While larger tournaments produced more total goals, the average number of goals scored per match tended to decrease as the number of participating teams increased.
+This suggests that tournament expansion inscreased total scoring volume through additional matches rather than increasing scoring intensity within individual games.
+
+* **Has the Number of Matches Increased Over Time?**
+
+The relationship between tournament year and matches played was analysed to understand how competition structure evolved.
+
+```python
+df[['Year', 'Matches_Played']]
+
+plt.scatter(df['Matches_Played'], df['Year'])
+plt.xlabel('Matches_Played')
+plt.ylabel('Year')
+plt.show()
+```
+
+![Matches Played Over Time](/assets/data/matches_played_over_time.png)
+
+```python
+start = df.iloc[0]['Matches_Played']
+end = df.iloc[-1]['Matches_Played']
+
+increase_matches_percent = (
+    ((end - start) / start)
+) * 100
+
+print(increase_matches_percent)
+```
+
+Matches increased from 18 in 1930 to 64 in 2022, ths represents an increase of approximately 255.56%. Since 1998, the tournament has consistently featured 64 matches.
+The increase in participating nations directly contributed to a larger tournament structure and significantly more matches.
+
+* **Which World Cup Tournament Recorded the Most Goals?**
+
+The tournament with the highest total goals scored was identified using the maximum value in the Total_Goals column.
+
+```python
+df.loc[df['Total_Goals'].idxmax()]
+```
+
+In the year, 2022, FIFA World Cup recorded the highest total goals of **172**, with an average of **2.69** goals per match.
+
+* **Which Country Has Won the Most World Cups?**
+
+A frequency analysis was conducted on tournament winners.
+
+```python
+df['Winner'].value_counts()
+```
+
+|     Winner       | Score |
+| :--------------- | :---- |
+| Brazil           |   5   |
+| Italy            |   4   |
+| West Germany     |   3   |
+| Argentina        |   3   |
+| Uruguay          |   2   |
+| France           |   2   |
+| England          |   1   |
+| Spain            |   1   |
+| Germany          |   1   |
+
+Brazil has won the FIFA World Cup a total of 5 times, Italy and West Germany follow with 4 and 3 titles repectively.
+The results highlight Brazil's historical dominance and consistent success across multiple generations of football.
+
+* **Which Countries Most Frequently Reaches the Final Stages?**
