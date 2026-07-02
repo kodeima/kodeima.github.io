@@ -202,3 +202,27 @@ Brazil has won the FIFA World Cup a total of 5 times, Italy and West Germany fol
 The results highlight Brazil's historical dominance and consistent success across multiple generations of football.
 
 * **Which Countries Most Frequently Reaches the Final Stages?**
+
+The Winner, Runner-Up, Third Place, and Fourth Place columns were combined to identify nations that consistently perform at the highest level.
+
+```python
+finalists = pd.concat([
+    df['Winner'],
+    df['Runner_Up'],
+    df['Third_Place'],
+    df['Fourth_Place']
+])
+
+final_counts = finalists.value_counts()
+
+final_counts.head(5)
+```
+
+|     Country      | Count |
+| :--------------- | :---- |
+| Brazil           |   11  |
+| Italy            |   8   |
+| West Germany     |   8   |
+| France           |   7   |
+| Argentina        |   6   |
+
